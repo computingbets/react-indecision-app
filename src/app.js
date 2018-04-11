@@ -1,11 +1,11 @@
 console.log("app.js is test");
 
-var app = {
+const app = {
   title: "Wrecking Ball",
   subtitle: "of Igloos",
   options: ['one', 'two', 'three']
 };
-var template = (
+const template = (
 <div>
   <h2>{app.title}</h2>
   {app.subtitle && <p>{app.subtitle}</p>}
@@ -28,13 +28,13 @@ var user = {
   location: 'Boston',
 };
 
-var templateTwo = (
+const templateTwo = (
   <div>
     {user.name ? <h1>John</h1> : 'hobo'}
     {user.age >= 18 && <p>Age: {user.age}</p>}
     {getLocation(user.location)}
   </div>
 )
-var appRoot = document.getElementById('app');
+const appRoot = document.getElementById('app');
 
 ReactDOM.render(template, appRoot);
